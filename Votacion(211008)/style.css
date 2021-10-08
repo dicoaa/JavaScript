@@ -1,0 +1,13 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:20% 40% 20% 40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
