@@ -13,6 +13,6 @@ function calcular(){
     let multiplicacionNota2 = num2 * 0.35;
     let suma = multiplicacionNota1 + multiplicacionNota2;
     let resta = valorNecesario - suma;    
-    notaNecesaria.textContent = `Su tercera nota debe ser: ${resta / 0.4}`;
+    nota3.textContent = `Su tercera nota debe ser: ${resta / 0.4}`;
 
 }
