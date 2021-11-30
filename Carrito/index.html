@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito Monstruo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container"> 
+        <h1>Ebanistería Los Monstruos</h1>
+        <hr>
+
+        <!-- Aqui ira la template-card -->
+        <div class="row" id="cards"></div>
+
+        <!-- Pinta lo del Carrito Vacio esta table -->
+        <table class="table table-dark table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Agregar - Disminuir</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+
+          <!-- Aqui vendran los elementos del carrito de compras -->
+          <tbody id="items"></tbody>
+          <tfoot>
+            <tr id="footer">
+              <th scope="row" colspan="5">Carrito Vacío - Comienza a comprar!</th>
+            </tr>
+          </tfoot>
+        </table>
+          
+
+    </div>
+
+    <!-- Misma tabla del template carrito pero se le agregan menos campos -->
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total Productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                Vaciar Carrito
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+    
+
+    <!-- Es una tabla -->
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-info btn-sm">
+                +
+            </button>
+            <button class="btn btn-danger btn-sm">
+                -
+            </button>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+
+
+    <!-- Los template no los lee el HTML, por esto se dejan en la parte de abajo -->
+    <!-- Esta es la card de los productos -->
+    <!-- Se crean los elementos aca y despues se pintan en dicha funcion -->
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+          <div class="card">
+              <img src="" alt="" class="card-img-top">
+            <div class="card-body"> 
+              <h5>Titulo</h5>
+              <p>precio</p>
+              <button class="btn btn-dark">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </template>
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>

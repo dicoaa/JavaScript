@@ -1,0 +1,38 @@
+[
+    {
+      "precio": 2000000,
+      "id": 1,
+      "title": "Sofá",
+      "thumbnailUrl": "images/Sofa.jpg"
+    },
+    {
+      "precio": 600000,
+      "id": 2,
+      "title": "Silla",
+      "thumbnailUrl": "images/Silla.jpg"
+    },
+    {
+      "precio": 500000,
+      "id": 3,
+      "title": "Mesa",
+      "thumbnailUrl": "images/Mesa.jpg"
+    },
+    {
+      "precio": 1200000,
+      "id": 4,
+      "title": "Estantería",
+      "thumbnailUrl": "images/Estanteria.jpg"
+    },
+    {
+      "precio": 1500000,
+      "id": 5,
+      "title": "Comedor",
+      "thumbnailUrl": "images/Comedor.jpg"
+    },
+    {
+      "precio": 1000000,
+      "id": 6,
+      "title": "Biblioteca",
+      "thumbnailUrl": "images/Biblioteca.jpg"
+    }
+  ]
