@@ -10,9 +10,10 @@ const fetchAPI = () => {                                                    // f
     .then(data=>{
         main.innerHTML=""
         const arreglo = data.results
-        seleccionarPersonaje(arreglo) // que me lleve al seleccionar
+        seleccionarPersonaje(arreglo), // que me lleve al seleccionar
         printPagination(data.info)
     })
+    .catch(error =>{console.error('Error-->: ', error)})
 }
 
 fetchAPI()
@@ -21,7 +22,7 @@ const seleccionarPersonaje= arreglo=>{
     arreglo.forEach(data=>{                             //0. crear forEach
         const option= document.createElement('option')  //se trae la variable; para que se hace esto, porque no se hizo getElementById
         option.setAttribute('value', data.name)         // 2. Poner el nombre en la etiqueta valor
-        option.textContent=data.name                    //3. se le pone nombre
+        option.textContent=data.name                    // 3. se le pone nombre
         fragment.appendChild(option)                    // 4. se adiciona al fragment
     })
     select.appendChild(fragment)                       // 5. el fragment se adiciona al select 
@@ -64,13 +65,14 @@ const crearTarjeta=arreglo=>{
 
 const printPagination = (info) => {
 
-    let preDisable = info.prev == null ? 'disabled' : ''
-    let nextDisable = info.next == null ? 'disabled' : ''
+    let preDisable = info.prev == null ? 'disabled' : '';
+    let nextDisable = info.next == null ? 'disabled' : '';
 
     let html = `<li class="page-item ${preDisable}" ><a class="page-link" onclick="getData('${info.prev}')" >Previous</a></li>`
     html += `<li class="page-item" ${nextDisable}><a class="page-link" onclick="getData('${info.next}')">Next</a></li>`
     document.getElementById('pagination').innerHTML = html
 
 }
+
 
 
